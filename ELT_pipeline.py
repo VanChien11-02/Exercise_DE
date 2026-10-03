@@ -39,11 +39,11 @@ def load_data_to_sql(customers, transactions, products):
 
 def main():
     customers, transactions, products = extract_data()
-    # customers = Transform_customer(customers)
+    customers = Transform_customer(customers)
     transactions = Transform_transaction(transactions)
-    # products = Transform_product(products)
+    products = Transform_product(products)
     load_data_to_sql(customers, transactions, products)
-    # print(customers["email"])
+    print(customers["email"])
     print("finish")
 
 if __name__ == "__main__":

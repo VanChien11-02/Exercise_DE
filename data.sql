@@ -26,13 +26,13 @@ create table products(
 	price decimal(18,2)
 )
 
--- select * from customers
--- SELECT * from products
--- SELECT * from transactions
+select top 10 * from customers
+SELECT top 10 * from products
+SELECT top 10 * from transactions
 
 SELECT customer_id, SUM(amount) AS total_revenue
 INTO customer_revenue
 FROM transactions
 GROUP BY customer_id;
 
-SELECT * from customer_revenue
+SELECT top 10 * from customer_revenue
